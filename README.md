@@ -2,6 +2,7 @@
 
 Nous sommes un groupe de collégiens passionnés par les jeux vidéo et le développement. Fin 2023, nous avons eu l'idée de créer un serveur minecraft moddé pvp-faction  sur le thème de l'uranium.
 
+Pour faire un don : https://fr.tipeee.com/uranium-server
 💸Pourquoi avons-nous besoin d'argent ?
 
 Pour pouvoir financer le serveur et pour l'améliorer.
