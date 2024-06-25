@@ -91,6 +91,30 @@
   color: white;
   padding: 15px 32px;
 }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.team-member {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.team-member h2 {
+    margin: 10px 0 5px;
+}
+.team-member p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
     </style>
 </head>
 <body>
@@ -103,6 +127,46 @@
     </div>
     <h3 class="h3">Qui sommes-nous ?</h3>
     <h3><br/>Nous sommes une équipe de collégiens passionnés par les jeux vidéos (en particulier Minecraft) et le développement. Tout à commencé fin 2023 Lorsque nous discutions de mods Minecraft avant d'aller en cours d'Anglais. Nous avons alors eu l'idée de créer notre propre mod Minecraft Uranium et notre propre serveur. Vous aurez la possibilité de maitriser de nouveaux items encore jamais développés, de nouvelles armes, armures et plein d'autres choses que nous ne dirons pas (Surprise!!!). Une chaine Whatsapp est en cours de création.</h3>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>L'ÉQUIPE</h1>
+        <div class="team-grid" id="teamGrid"></div>
+    </div>
+
+    <script>
+        const teamMembers = [
+            {
+                name: "LENI",
+                role: "Game moderation, designer",
+                description: "Creator of Uranium Server",
+                image: "lenip.jfif"
+            },
+            {
+                name: "MAEL",
+                role: "DEVELOPER, Game moderation, designer",
+                description: "Developer and creator of Uranium Server",
+                image: "mael.jfif"
+            },
+            // Ajoutez les autres membres de l'équipe ici
+        ];
+
+        const teamGrid = document.getElementById('teamGrid');
+
+        teamMembers.forEach(member => {
+            const memberElement = document.createElement('div');
+            memberElement.className = 'team-member';
+            memberElement.innerHTML = `
+                <img src="${member.image}" alt="${member.name}">
+                <h2>${member.name}</h2>
+                <p>${member.role}</p>
+                <p>${member.description}</p>
+            `;
+            teamGrid.appendChild(memberElement);
+        });
+    </script>
+<script type="text/javascript" src="js/script.js"></script>
     <a href="https://www.youtube.com/@uraniumserver" target="_blank">
         <button class="youtube-button">Aller sur notre chaine Youtube (Abonne toi)</button>
       </a>
